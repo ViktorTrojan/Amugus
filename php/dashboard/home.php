@@ -13,9 +13,10 @@ if (!isset($_SESSION['loggedin'])) {
 
 <head>
 	<meta charset="utf-8">
-	<title>Home Page</title>
 	<link href="../../css/home.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	<link rel="shortcut icon" href="../../img/Logo-1024px.ico" type="image/x-icon">
+	<title>Home Page</title>
 </head>
 
 <body>
