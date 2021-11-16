@@ -34,7 +34,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM users WHERE username = ?')) 
 		session_regenerate_id();
 		$_SESSION['loggedin'] = TRUE;
 		$_SESSION['name'] = $_POST['username'];
-		$_SESSION['email'] = $_POST['email'];
+		//$_SESSION['email'] = $_POST['email'];
 		$_SESSION['id'] = $id;
 		header('Location: dashboard/home.php');
 	} else {
