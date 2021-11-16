@@ -15,7 +15,7 @@ if (!isset($_SESSION['loggedin'])) {
 	<meta charset="utf-8">
 	<link href="../../css/home.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-	<link rel="shortcut icon" href="../../img/Logo-1024px.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="../../img/Logo-256px.ico" type="image/x-icon">
 	<title>Home Page</title>
 </head>
 
