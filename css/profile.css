@@ -1,0 +1,33 @@
+
+table, th, td {
+    width: 100%;
+    border: 1px solid black;
+  }
+
+:root {
+    --blue: rgb(38, 145, 217);
+    --white: rgb(255, 255, 255);
+    --bgr1: rgb(110, 128, 255);
+    --bgr2: rgb(210, 128, 255);
+    --form: rgb(255, 255, 255);
+    --form-shadow: rgba(0, 0, 0, 0.3);
+}
+
+
+.login-container {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 400px;
+    background: var(--form);
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px var(--form-shadow);
+    transform: translate(-50%, -50%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, var(--bgr1), var(--bgr2));
+    height: 100vh;
+}

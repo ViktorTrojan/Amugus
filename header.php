@@ -1,3 +1,6 @@
+<?php
+//session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,11 +9,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
     <script defer type="text/javascript" src="js/index.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/Logo-256px.ico" type="image/x-icon">
-    <title>Amugus Login</title>
+    <title>Amugus</title>
 </head>
 
 <body>
@@ -27,3 +30,19 @@
         </nav>
         <a class="cta" href="index.php"><button>Login</button></a>
     </header>
+
+    <?php
+function function_alert($message)
+{
+    echo "<script>alert('$message');</script>";
+}
+
+
+function cookie($cookie_name, $cookie_value, $days){
+        setcookie($cookie_name, $cookie_value, time() + (86400 * $days), "/");
+        $_SESSION[$cookie_name] = $cookie_value;
+        if (!isset($_SESSION[$cookie_name])) {
+            session_destroy();
+        }
+}
+?>

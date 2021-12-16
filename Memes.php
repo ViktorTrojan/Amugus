@@ -1,8 +1,7 @@
 <?php
 include_once 'header.php';
-
+session_start();
 ?>
 
-<div class="gif">
-    <img src='img/among-us.gif'>
+<div class = "pic">
 </div>
