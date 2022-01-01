@@ -1,4 +1,28 @@
 
+.del_button {
+    padding: 9px, 25px;
+    background-color: rgb(169, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.del_button:hover {
+    background-color: rgba(226, 96, 96, 0.7);
+}
+
+.sav_button {
+    padding: 9px, 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.sav_button:hover {
+    background-color: rgba(0, 136, 169, 0.7);
+}
+
 .header {
     background-color: rgb(78, 97, 245);
     border: darkblue;
@@ -57,7 +81,7 @@
     transition: all 0.3s ease 0s;
 }
 
-li, a, button {
+li, a{
     font-weight: 500;
     font-size: 16px;
     color: #ecf0f1;
@@ -92,14 +116,6 @@ header {
     color: #073c49;
 }
 
-button {
-    padding: 9px, 25px;
-    background-color: rgba(0, 136, 169, 1);
-    border: none;
-    border-radius: 500px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
 
 button:hover {
     background-color: rgba(0, 136, 169, 0.7);

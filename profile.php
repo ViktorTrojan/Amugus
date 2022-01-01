@@ -1,9 +1,20 @@
 <?php
-require_once 'includes/dbh.inc.php';
-include_once 'header.php';
 session_start();
+require_once 'includes/dbh.inc.php';
+include_once 'includes/header.inc.php';
+$username = DB("username");
+$password = DB("password");
+$email = DB("email");
+$date = DB("createDate");
+$ProPic = DB("profilePicture");
 
-//$username = getDB("uname");
+
+if(DB("admin")==1){
+  $status = "admin";
+} elseif (DB("admin")==0) {
+  $status = "user";
+}
+
 ?>
 
 
@@ -11,28 +22,32 @@ session_start();
 
 <div class="login-container">
         <div class="top">
-            <h1>Profile</h1>
+            
+            <h1><img class="logo" src="img/user<?php echo $ProPic?>.png" alt="ProfilePicture" width="50" height="50">Profile</h1>
         </div>
-<div class="table">
-<table>
-  <tr>
-    <th>Username</th>
-    <th>Password</th>
-    <th>E-Mail</th>
-    <th>Account created on</th>
-    <th>Status</th>
-  </tr>
-  <tr>
-    <td><?php echo $_SESSION['username']?></td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-    <td>Germany</td>
-    <td>Unknown</td>
-  </tr>
-</table>
-
-
-
+<div>
+  <table class="table">
+    <tr>
+      <th>Username:</th>
+      <td><?php echo $username?></td>
+    </tr>
+    <tr>
+      <th>Password:</th>
+      <td><?php echo "*****"?></td>
+    </tr>
+    <tr>
+      <th>E-Mail:</th>
+      <td><?php echo $email?></td>
+    </tr>
+    <tr>
+      <th>Created on:</th>
+      <td><?php echo $date?></td>
+    </tr>
+    <tr>
+      <th>Status:</th>
+      <td><?php echo $status?></td>
+    </tr>
+  </table>
 </div>
 
 </body>

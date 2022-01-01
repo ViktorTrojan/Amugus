@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Monserrat:500');
 
-table, th, td {
-    width: 100%;
-    border: 1px solid black;
-  }
+
+body {
+    font-family: "Monserrat", sans-serif;
+}
+
 
 :root {
     --blue: rgb(38, 145, 217);
