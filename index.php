@@ -13,6 +13,7 @@ for ($i = $row_amount; $i > 0; $i--) {
 }
 $_SESSION['loggedin']=false;
 ?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -20,59 +21,93 @@ $_SESSION['loggedin']=false;
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <link rel="shortcut icon" href="img/Logo-256px.ico" type="image/x-icon">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-</head>
+  </head>
   <body>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
 
 
-<!--<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">-->
-<link rel="stylesheet" type="text/css" href="css/index.css">
+<div class="container">
+    <div class="row justify-content-center">
+            <div class="col-auto">
+                <div class="gallery d-flex">
+                    <div>
+                        <div class="top">
+                            <h1>Sign In</h1>
+                        </div>
+                        <form action="?login=1" method="POST" autocomplete="off" class="needs-validation" novalidate>
+  <div class="form-row">
+    <div class="col-auto">
+      <label for="validationCustom01">Username</label>
+      <input type="text" class="form-control" name="username" id="validationCustom01" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+      <div class="invalid-feedback">
+        Username not valid or doesn't exists!
+      </div>
+    </div>
+    <div class="col-auto">
+      <label for="validationCustom02">Password</label>
+      <input type="password" class="form-control" name="pw" id="validationCustom02" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+      <div class="invalid-feedback">
+        Password not valid or doesn't match!
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center" style="margin-top: 10px;">
+      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" name="submit" value="Sign In">Sign In</button>
+  </div>
+  <div class="login-link">
+      <span class="abt">Not a member yet? 
+          <p><a href="register.php">Sign Up</a></p>
+      </span>
+  </div>
+</form>
 
-<div class="login-container">
-        <div class="top">
-            <h1>Login</h1>
-        </div>
-
-        <form action = "?login=1" method="post" autocomplete="off">
-            <div class="text-input">
-                <div class="i">
-                    <i class="fas fa-user"></i>
-                </div>
-                <div class="div">
-                    <input class="input" type="text" name="username" required>
-                    <label>Username</label>
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+                    </div>
                 </div>
             </div>
+    </div>
+</div>
 
-            <div class="text-input">
-                <div class="i">
-                    <i class="fas fa-lock"></i>
-                </div>
-                <div class="div">
-                    <input class="input" type="password" name="pw" required>
-                    <label>Password</label>
-                </div>
-            </div>
-            <div class="d-flex justify-content-center">
-                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" name="submit" value="Login">Login</button>
-            </div>
-                
 
-            <div class="signup-link">
-                Not a member? <a href="register.php">Sign-Up</a>
-            </div>
-            <?php
+</body>
+
+</html>
+<?php
 if (isset($_GET["login"])) {
     $username = $_POST["username"];
     $pw1 = $_POST["pw"];
@@ -110,16 +145,13 @@ if (isset($_GET["login"])) {
             $_SESSION['status'] = $status;
             ?><meta http-equiv="refresh" content="0;url=profile.php"><?php
         } else {
-            function_alert("NO");
-            function_alert($pw1 . $pw2);
+            function_alert("Your password do not match!");
+            ?><meta http-equiv="refresh" content="0;url=index.php"><?php
         }
+    }else{
+      function_alert("Username doesn't exist!");
+      ?><meta http-equiv="refresh" content="0;url=index.php"><?php
     }
 
 }
 ?>
-        </form>
-
-    </div>
-    </body>
-
-</html>

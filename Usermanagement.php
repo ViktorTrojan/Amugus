@@ -1,5 +1,9 @@
 <?php
 session_start();
+if ($_SESSION['loggedin']==false || $_SESSION['status'] == 0 || !isset($_SESSION['status']) || !isset($_SESSION['loggedin'])) {
+    header("Location: index.php");
+}else{
+
 require_once 'includes/dbh.inc.php';
 include_once 'includes/UMheader.inc.php';
 
@@ -7,29 +11,12 @@ $query = "SELECT * FROM accounts";
 $response = mysqli_query($dbc, $query);
 $row_amount = mysqli_num_rows($response);
 
-/*
-$headers .= "Organization: Amugus\r\n";
-$headers .= "MIME-Version: 1.0\r\n";
-$headers .= "Content-type: text/plain; charset=iso-8859-1\r\n";
-$headers .= "X-Priority: 3\r\n";
-$headers .= "X-Mailer: PHP" . phpversion() . "\r\n";
- */
+
 $result = $mysqli->query("SELECT * FROM accounts");
-
-if ($_SESSION['loggedin']==false || $_SESSION['status'] == 0) {
-    header("Location: index.php");
-}
 ?>
+<div class="table-responsive" >
 
-
-
-<div class="login-container">
-        <div class="top">
-            <h1>Account List</h1>
-        </div>
-<div class="table">
-
-<table class="table">
+<table class="table" style="margin-top: 50px">
         <thead>
             <tr>
             <th></th>
@@ -81,9 +68,13 @@ while ($row = $result->fetch_assoc()):?>
             </tr>
             <?php endwhile;?>
     </table>
+    </div>
     </form>
-</div>
+
 
 </body>
 
 </html>
+<?php
+}
+?>

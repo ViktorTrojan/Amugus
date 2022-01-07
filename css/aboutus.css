@@ -1,4 +1,29 @@
-:root {
+@import url('https://fonts.googleapis.com/css?family=Monserrat:500');
+
+
+
+
+
+
+div.gallery {
+    margin: 5px;
+    margin-top: 80px;
+    border-radius: 10px;
+    background-color: white;
+    width: fit-content;
+    padding: 5px;
+    box-shadow: 0px 10px 20px var(--form-shadow);
+}
+
+@media only screen and (max-width: 600px) {
+    div.gallery{
+        width: fit-content;
+    }
+  }
+
+
+
+  :root {
     --blue: rgb(38, 145, 217);
     --white: rgb(255, 255, 255);
     --bgr1: rgb(110, 128, 255);
@@ -8,54 +33,14 @@
     --form-shadow: rgba(0, 0, 0, 0.3);
 }
 
-
-
-div.gallery {
-    padding: 10px;
-    margin-top: 40%;
-    border-radius: 10px;
-    background-color: white;
-    width: fit-content;
-    box-shadow: 0px 10px 20px var(--form-shadow);
-}
-
-
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
-
-.login-link {
-    margin-top: 5px;
-    margin-bottom: 15px;
-    text-align: center;
-    font-size: 16px;
-    color: #666666;
-}
-
-.login-link a {
-    color: var(--blue);
-    text-decoration: none;
-}
-
-.login-link a:hover {
-    text-decoration: underline;
+    font-family: "Monserrat", sans-serif;
 }
 
 
-.header {
-    background-color: rgb(78, 97, 245);
-    border: darkblue;
-    border-bottom-style: solid;
-    border-left-style: solid;
-    border-right-style: solid;
-    border-width: 3px;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-}
 
 .gif {
     display: block;
@@ -104,7 +89,7 @@ div.gallery {
     transition: all 0.3s ease 0s;
 }
 
-li, a{
+li, a, button {
     font-weight: 500;
     font-size: 16px;
     color: #ecf0f1;
@@ -140,6 +125,7 @@ header {
 }
 
 
+
 body {
     font-family: "Monserrat", sans-serif;
     margin: 0;
@@ -173,10 +159,9 @@ body {
         100%{background-position:0% 96%}
     }
 
-
 .login-container {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     width: 400px;
     background: var(--form);
@@ -185,20 +170,10 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.top{
-    width: 400px;
-}
-
-@media only screen and (max-width: 600px) {
-    .top{
-        width: 300px;
-    }
-  }
-
 .top h1 {
-
     text-align: center;
     padding: 20px 0;
+    border-bottom: 1px solid silver;
 }
 
 .login-container form {
@@ -211,8 +186,6 @@ form .text-input {
     margin: 30px 0;
     display: flex;
     border-bottom: 2px solid #dddddd;
-    padding-left: 10px;
-    padding-right: 10px;
 }
 
 .text-input .div {
@@ -236,7 +209,7 @@ form .text-input {
 }
 
 .text-input input {
-    width: max-content;
+    width: 100%;
     padding: 0 5px;
     height: 40px;
     font-size: 16px;
@@ -292,7 +265,33 @@ form .text-input {
     font-size: 14px;
 }
 
+.pass {
+    margin: -5px 0 20px 5px;
+    color: #a6a6a6;
+    cursor: pointer;
+}
+
+.pass:hover {
+    text-decoration: underline;
+}
+
 
 input[type="submit"]:hover {
     filter: brightness(85%);
+}
+
+.signup-link {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+}
+
+.signup-link a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
 }

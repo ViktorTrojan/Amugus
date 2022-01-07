@@ -1,37 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Monserrat:500');
 
-.grid {
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-}
-
 div.gallery {
-    margin: 5px;
-    border: 3px solid rgb(255, 0, 0);
-    border-radius: 5px;
-    float: center;
-    width: 30%;
-    transition: all 0.3s ease 0s;
-  }
-  
-div.gallery:hover {
-border: 1px solid rgb(0, 38, 255);
+    margin: 15px;
+    margin-top: 80px;
+    border-radius: 10px;
+    background-color: white;
+    width: fit-content;
+    padding: 5px;
+    box-shadow: 0px 10px 20px var(--form-shadow);
+    transition: transform .2s;
 }
 
-div.gallery img {
-    border-radius: 5px;
+div.gallery:hover{
+    transform: scale(1.15);
 }
-
-
-div.desc {
-padding: 15px;
-text-align: center;
-}
-
-
-
-
 
 
 
@@ -40,13 +22,11 @@ text-align: center;
     --white: rgb(255, 255, 255);
     --bgr1: rgb(110, 128, 255);
     --bgr2: rgb(210, 128, 255);
+    --bgr3: rgb(166, 110, 255);
     --form: rgb(255, 255, 255);
     --form-shadow: rgba(0, 0, 0, 0.3);
 }
 
-body {
-    font-family: "Monserrat", sans-serif;
-}
 
 * {
     margin: 0;
@@ -139,11 +119,38 @@ button:hover {
 }
 
 body {
+    font-family: "Monserrat", sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(45deg, var(--bgr1), var(--bgr2));
     height: 100vh;
-}
+    background: linear-gradient(45deg, var(--bgr1), var(--bgr2), var(--bgr3));
+    background-size: 400% 400%;
+    -webkit-animation: AnimationName 20s ease infinite;
+    -moz-animation: AnimationName 20s ease infinite;
+    -o-animation: AnimationName 20s ease infinite;
+    animation: AnimationName 20s ease infinite;
+    }
+    @-webkit-keyframes AnimationName {
+        0%{background-position:0% 96%}
+        50%{background-position:100% 5%}
+        100%{background-position:0% 96%}
+    }
+    @-moz-keyframes AnimationName {
+        0%{background-position:0% 96%}
+        50%{background-position:100% 5%}
+        100%{background-position:0% 96%}
+    }
+    @-o-keyframes AnimationName {
+        0%{background-position:0% 96%}
+        50%{background-position:100% 5%}
+        100%{background-position:0% 96%}
+    }
+    @keyframes AnimationName {
+        0%{background-position:0% 96%}
+        50%{background-position:100% 5%}
+        100%{background-position:0% 96%}
+    }
+
 
 .login-container {
     position: absolute;

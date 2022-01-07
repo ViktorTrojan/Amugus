@@ -1,24 +1,50 @@
-@import url('https://fonts.googleapis.com/css?family=Monserrat:500');
-
 :root {
     --blue: rgb(38, 145, 217);
     --white: rgb(255, 255, 255);
     --bgr1: rgb(110, 128, 255);
     --bgr2: rgb(210, 128, 255);
+    --bgr3: rgb(166, 110, 255);
     --form: rgb(255, 255, 255);
     --form-shadow: rgba(0, 0, 0, 0.3);
 }
 
-body {
-    font-family: "Monserrat", sans-serif;
+
+
+div.gallery {
+    padding: 10px;
+    margin-top: 50%;
+    border-radius: 10px;
+    background-color: white;
+    width: fit-content;
+    box-shadow: 0px 10px 20px var(--form-shadow);
 }
+
+
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Monserrat", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
+
+.login-link {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+}
+
+.login-link a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
 
 .header {
     background-color: rgb(78, 97, 245);
@@ -78,7 +104,7 @@ body {
     transition: all 0.3s ease 0s;
 }
 
-li, a, button {
+li, a{
     font-weight: 500;
     font-size: 16px;
     color: #ecf0f1;
@@ -114,17 +140,43 @@ header {
 }
 
 
-
 body {
+    font-family: "Monserrat", sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(45deg, var(--bgr1), var(--bgr2));
     height: 100vh;
-}
+    background: linear-gradient(45deg, var(--bgr1), var(--bgr2), var(--bgr3));
+    background-size: 400% 400%;
+    -webkit-animation: AnimationName 20s ease infinite;
+    -moz-animation: AnimationName 20s ease infinite;
+    -o-animation: AnimationName 20s ease infinite;
+    animation: AnimationName 20s ease infinite;
+    }
+    @-webkit-keyframes AnimationName {
+        0%{background-position:0% 96%}
+        50%{background-position:100% 5%}
+        100%{background-position:0% 96%}
+    }
+    @-moz-keyframes AnimationName {
+        0%{background-position:0% 96%}
+        50%{background-position:100% 5%}
+        100%{background-position:0% 96%}
+    }
+    @-o-keyframes AnimationName {
+        0%{background-position:0% 96%}
+        50%{background-position:100% 5%}
+        100%{background-position:0% 96%}
+    }
+    @keyframes AnimationName {
+        0%{background-position:0% 96%}
+        50%{background-position:100% 5%}
+        100%{background-position:0% 96%}
+    }
+
 
 .login-container {
     position: absolute;
-    top: 55%;
+    top: 50%;
     left: 50%;
     width: 400px;
     background: var(--form);
@@ -133,10 +185,20 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.top{
+    width: 400px;
+}
+
+@media only screen and (max-width: 600px) {
+    .top{
+        width: 300px;
+    }
+  }
+
 .top h1 {
+
     text-align: center;
     padding: 20px 0;
-    border-bottom: 1px solid silver;
 }
 
 .login-container form {
@@ -149,6 +211,8 @@ form .text-input {
     margin: 30px 0;
     display: flex;
     border-bottom: 2px solid #dddddd;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .text-input .div {
@@ -172,7 +236,7 @@ form .text-input {
 }
 
 .text-input input {
-    width: 100%;
+    width: max-content;
     padding: 0 5px;
     height: 40px;
     font-size: 16px;
@@ -228,33 +292,7 @@ form .text-input {
     font-size: 14px;
 }
 
-.pass {
-    margin: -5px 0 20px 5px;
-    color: #a6a6a6;
-    cursor: pointer;
-}
-
-.pass:hover {
-    text-decoration: underline;
-}
-
 
 input[type="submit"]:hover {
     filter: brightness(85%);
-}
-
-.signup-link {
-    margin: 30px 0;
-    text-align: center;
-    font-size: 16px;
-    color: #666666;
-}
-
-.signup-link a {
-    color: var(--blue);
-    text-decoration: none;
-}
-
-.signup-link a:hover {
-    text-decoration: underline;
 }
